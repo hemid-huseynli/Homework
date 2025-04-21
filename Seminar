@@ -1,0 +1,74 @@
+# Sum of Natural Numbers
+def sum_natural(n):
+    return n * (n + 1) // 2
+
+# Factorial
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+# Fibonacci Number
+def fibonacci(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+# Reverse a String
+def reverse_string(s):
+    return s[::-1]
+
+# Count Digits
+def count_digits(n):
+    return len(str(n))
+
+# Power of a Number
+def power(a, b):
+    return a ** b
+
+# Check Palindrome
+def is_palindrome(s):
+    return s == s[::-1]
+
+# Print Numbers from 1 to N
+def print_to_n(n):
+    return ' '.join(str(i) for i in range(1, n + 1))
+
+# Print Numbers from N to 1
+def print_reverse(n):
+    return ' '.join(str(i) for i in range(n, 0, -1))
+
+# Find GCD (Euclidean Algorithm)
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+# Sum of Digits
+def sum_digits(n):
+    return sum(int(digit) for digit in str(n))
+
+# Binary Representation of a Number
+def to_binary(n):
+    return bin(n)[2:]
+
+# Check if Array is Sorted
+def is_sorted(arr, index=0):
+    if index == len(arr) - 1:
+        return True
+    return arr[index] <= arr[index + 1] and is_sorted(arr, index + 1)
+
+# Find Maximum in List
+def find_max(arr, index=0):
+    if index == len(arr) - 1:
+        return arr[index]
+    return max(arr[index], find_max(arr, index + 1))
+
+# Product of Elements in List
+def product_list(arr):
+    if not arr:
+        return 1
+    return arr[0] * product_list(arr[1:])
